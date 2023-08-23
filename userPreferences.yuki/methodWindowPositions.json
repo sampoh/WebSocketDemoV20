@@ -1,0 +1,200 @@
+{
+	"Sources/Classes/wsHandler.4dm": {
+		"left": 739,
+		"top": 330,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Methods/START_WebSocket.4dm": {
+		"left": 105,
+		"top": 478,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Classes/wsObject.4dm": {
+		"left": 948,
+		"top": 183,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Methods/LOG_Server.4dm": {
+		"left": 157,
+		"top": 324,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Methods/LOG_Server_Sub.4dm": {
+		"left": 827,
+		"top": 629,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Classes/myConnection.4dm": {
+		"left": 829,
+		"top": 249,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/DatabaseMethods/onWebConnection.4dm": {
+		"left": 331,
+		"top": 436,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/DatabaseMethods/onStartup.4dm": {
+		"left": 599,
+		"top": 408,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/DatabaseMethods/onServerStartup.4dm": {
+		"left": 331,
+		"top": 436,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Methods/SendToAll.4dm": {
+		"left": 783,
+		"top": 545,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Methods/SendToAll_Sub.4dm": {
+		"left": 314,
+		"top": 584,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Methods/generateUuid.4dm": {
+		"left": 105,
+		"top": 478,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Methods/VerifyClient.4dm": {
+		"left": 157,
+		"top": 324,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Methods/saveSession.4dm": {
+		"left": 567,
+		"top": 360,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Forms/Client_List/ObjectMethods/Button.4dm": {
+		"left": 105,
+		"top": 478,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Forms/Client_List/ObjectMethods/BTN_CLOSE.4dm": {
+		"left": 105,
+		"top": 478,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Forms/Client_List/ObjectMethods/BTN_SEND.4dm": {
+		"left": 67,
+		"top": 411,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Forms/Client_List/ObjectMethods/BTN_SEND_TO_ALL.4dm": {
+		"left": 67,
+		"top": 411,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Forms/Client_List/ObjectMethods/BTN_SEND_TO_A_USER.4dm": {
+		"left": 277,
+		"top": 649,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Methods/LoadAllClients.4dm": {
+		"left": 67,
+		"top": 411,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Forms/Client_List/method.4dm": {
+		"left": 19,
+		"top": 618,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Forms/Client_List/ObjectMethods/BTN_SEND_TO_A_USER1.4dm": {
+		"left": 67,
+		"top": 411,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Forms/Client_List/ObjectMethods/BTN_REFRESH_LIST.4dm": {
+		"left": 67,
+		"top": 411,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Forms/Client_List/ObjectMethods/LB_Client_List.4dm": {
+		"left": 554,
+		"top": 432,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Forms/Client_List/ObjectMethods/BTN_SEND_TO_ONE_USER.4dm": {
+		"left": 286,
+		"top": 288,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Methods/SendToOneUser.4dm": {
+		"left": 19,
+		"top": 618,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Methods/SendToOneUser_Sub.4dm": {
+		"left": 695,
+		"top": 617,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Methods/removeSession.4dm": {
+		"left": 783,
+		"top": 545,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Methods/START_Demo.4dm": {
+		"left": 581,
+		"top": 586,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Methods/preSaveSession.4dm": {
+		"left": 567,
+		"top": 360,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Methods/START_Demo_Sub.4dm": {
+		"left": 605,
+		"top": 306,
+		"width": 1000,
+		"height": 488
+	},
+	"Sources/Methods/regexLoop.4dm": {
+		"left": 277,
+		"top": 649,
+		"width": 1000,
+		"height": 488
+	},
+	"Trash/Methods/(getIP).4dm": {
+		"left": 406,
+		"top": 165,
+		"width": 1046,
+		"height": 830
+	}
+}

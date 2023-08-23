@@ -1,0 +1,196 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "WebSocket Tester",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"BTN_CLOSE": {
+					"type": "button",
+					"text": "CLOSE",
+					"top": 17,
+					"left": 19,
+					"width": 91,
+					"height": 38,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/BTN_CLOSE.4dm"
+				},
+				"LB_Client_List": {
+					"type": "listbox",
+					"left": 19,
+					"top": 189,
+					"width": 366,
+					"height": 393,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "currentSelection",
+					"table": 2,
+					"dataSource": "LB_Client_List",
+					"selectionMode": "single",
+					"method": "ObjectMethods/LB_Client_List.4dm",
+					"highlightSet": "$selected_client",
+					"columns": [
+						{
+							"header": {
+								"text": "wsid",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "[client:2]wsid:2",
+							"width": 47,
+							"enterable": false,
+							"textAlign": "center"
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "uuid"
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"dataSource": "[client:2]uuid:3",
+							"width": 301,
+							"enterable": false
+						}
+					]
+				},
+				"MSG": {
+					"type": "input",
+					"left": 130,
+					"top": 17,
+					"width": 390,
+					"height": 96
+				},
+				"BTN_SEND_TO_ALL": {
+					"type": "button",
+					"text": "SEND TO ALL",
+					"top": 17,
+					"left": 540,
+					"width": 245,
+					"height": 38,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/BTN_SEND_TO_ALL.4dm"
+				},
+				"BTN_SEND_TO_A_USER": {
+					"type": "button",
+					"text": "SEND TO A USER",
+					"top": 75,
+					"left": 540,
+					"width": 245,
+					"height": 38,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/BTN_SEND_TO_A_USER.4dm"
+				},
+				"BTN_REFRESH_CLIENT_LIST": {
+					"type": "button",
+					"text": "REFRESH CLIENT LIST",
+					"top": 131,
+					"left": 19,
+					"width": 366,
+					"height": 38,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/BTN_REFRESH_CLIENT_LIST.4dm"
+				},
+				"List Box": {
+					"type": "listbox",
+					"left": 405,
+					"top": 133,
+					"width": 380,
+					"height": 449,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"columns": [
+						{
+							"header": {
+								"text": "Client wsid",
+								"name": "Header3"
+							},
+							"name": "Column3",
+							"footer": {
+								"name": "Footer3"
+							},
+							"width": 86,
+							"enterable": false,
+							"dataSource": "<>alWSID",
+							"textAlign": "center"
+						},
+						{
+							"header": {
+								"name": "Header4",
+								"text": "Data from client"
+							},
+							"name": "Column4",
+							"footer": {
+								"name": "Footer4"
+							},
+							"width": 256,
+							"dataSource": "<>atDATA",
+							"enterable": false
+						}
+					]
+				}
+			}
+		}
+	],
+	"geometryStamp": 112,
+	"width": 800,
+	"height": 600,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

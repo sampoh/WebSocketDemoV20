@@ -1,0 +1,40 @@
+{
+	"Class": {
+		"classes": [
+			"myConnection",
+			"wsObject"
+		]
+	},
+	"Common": {
+		"methods": [
+			"generateUuid",
+			"preSaveSession",
+			"regexLoop",
+			"removeSession",
+			"saveSession"
+		]
+	},
+	"Demo": {
+		"methods": [
+			"LoadAllClients",
+			"SendToAll",
+			"SendToAll_Sub",
+			"SendToOneUser",
+			"SendToOneUser_Sub",
+			"START_Demo",
+			"START_Demo_Sub"
+		],
+		"forms": [
+			"Client_List"
+		]
+	},
+	"Launch": {
+		"methods": [
+			"LOG_Server",
+			"LOG_Server_Sub",
+			"START_WebSocket",
+			"VerifyClient"
+		]
+	},
+	"trash": {}
+}

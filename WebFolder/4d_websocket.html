@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<style>
+html,body{margin:0px;padding:0px;}
+#form_outer{
+	margin:10px;
+}
+#send_form{
+	width:480px;
+}
+#send_form textarea{
+	width:100%;
+	font-size:12px;
+}
+#send_form button{
+	padding:6px 30px;
+	font-size:14px;
+}
+.flex_outer{
+	margin:10px;
+	display:flex;
+	align-items:flex-start;
+	gap:15px 10px;
+}
+table.status{
+	border-collapse:collapse;
+	border:solid;border-width:1px 0px 0px 1px;
+}
+table.status th{background-color:#b0c4de;}
+table.status th,
+table.status td{
+	padding:3px 6px;
+	border:solid;border-width:0px 1px 1px 0px;
+}
+table.message{
+	border-collapse:collapse;
+	border:solid;border-width:1px 0px 0px 1px;
+}
+table.message th{background-color:#ffebcd;}
+table.message th,
+table.message td{
+	padding:3px 6px;
+	border:solid;border-width:0px 1px 1px 0px;
+}
+</style>
+<script>
+window.onload = function(){
+
+var formObj = document.getElementById('send_form');
+var statusBody = document.getElementById('connection_status');
+var messageBody = document.getElementById('message_text');
+
+//WebSocket URI
+var WS_URI = 'ws://' + location.host;
+var connection = new WebSocket(WS_URI);
+
+
+//通信が接続された場合
+connection.onopen = function(e){
+//	console.log("connected to '" + WS_URI + "'");
+	addStatusChild(statusBody,"connected to '" + WS_URI + "'");
+};
+
+//エラーが発生した場合
+connection.onerror = function(error){
+//	console.log('error');
+	addStatusChild(statusBody,'error');
+};
+ 
+//メッセージを受け取った場合
+connection.onmessage = function(e){
+//	console.log('receive data',e);
+	addStatusChild(statusBody,'receive data');
+	addDataChild(messageBody,e.data);
+};
+  
+//通信が切断された場合
+connection.onclose = function(){
+//	console.log('disconnected');
+	addStatusChild(statusBody,'disconnected');
+};
+
+//ブラウザからサーバへ送信
+formObj.addEventListener('submit',function(ev){
+	ev.stopPropagation();
+	ev.preventDefault();
+	var data = document.forms['form'].message.value;
+	connection.send(data);
+	addStatusChild(statusBody,'send data');
+	return false;
+})
+
+}
+
+//サーバステータス表示汎用
+function addStatusChild(target,message){
+	var child = document.createElement('tr');
+	target.appendChild(child);
+	var td01 = document.createElement('td');
+	var td02 = document.createElement('td');
+	child.appendChild(td01);
+	child.appendChild(td02);
+	td01.innerText = getYYYYMMDDhhmmss();
+	td02.innerText = message;
+}
+
+//データ受信汎用
+function addDataChild(target,data){
+	var child = document.createElement('tr');
+	target.appendChild(child);
+	var td = document.createElement('td');
+	child.appendChild(td);
+	td.innerText = data;
+}
+
+//現在日時文字列
+function getYYYYMMDDhhmmss(){
+	var date = new Date();
+	return date.getFullYear() + '/' + ('0' + (date.getMonth() + 1)).slice(-2) + '/' +('0' + date.getDate()).slice(-2) + ' ' +  ('0' + date.getHours()).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2) + ':' + ('0' + date.getSeconds()).slice(-2);
+}
+
+</script>
+<body>
+
+<div id="form_outer">
+	<form id="send_form" name="form">
+		<textarea rows="5" name="message"></textarea>
+		<button type="submit">送信</button>
+	</form>
+</div>
+
+<hr>
+
+<div class="flex_outer">
+
+	<div class="flex_inner">
+		<table class="status">
+			<thead>
+				<tr>
+					<th colspan="2">Connection</th>
+				</tr>
+				<tr>
+					<th>Time</th>
+					<th>Status</th>
+				</tr>
+			</thead>
+			<tbody id="connection_status"></tbody>
+		</table>
+	</div>
+
+	<div class="flex_inner">
+		<table class="message">
+			<thead>
+				<tr>
+					<th>Message</th>
+				</tr>
+			</thead>
+			<tbody id="message_text"></tbody>
+		</table>
+	</div>
+
+</div>
+
+</body>
+</html>

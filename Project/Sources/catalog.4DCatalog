@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="WebSocketDemoV20" uuid="4E53431414EC96489EC27176D356ADD2" collation_locale="ja">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="serverLog" uuid="F42979E95E618942A56EA4686C753E21" id="1">
+		<field name="ID" uuid="FE6B9EF0AE4332489A7DFE3A604C2893" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="datetime" uuid="F1252C580F0C874381B437827E1B9891" type="10" limiting_length="20" id="2"/>
+		<field name="info" uuid="5C9A392741ED424B8D1AA74D4AF24E46" type="10" id="3"/>
+		<primary_key field_name="ID" field_uuid="FE6B9EF0AE4332489A7DFE3A604C2893"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="4">
+				<color red="181" green="145" blue="209" alpha="255"/>
+				<coordinates left="0" top="0" width="183" height="138.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="client" uuid="08203D1FAA6F0742A962FFF6A6385220" id="2">
+		<field name="ID" uuid="1A6672EF4E18B94E8F40F366B4A2752B" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="wsid" uuid="008AB098AB2A5D41905B261C4CB925DB" type="4" id="2"/>
+		<field name="uuid" uuid="D430F9D7475D0B4DBF3253827AE3BFE3" type="10" limiting_length="255" id="3"/>
+		<primary_key field_name="ID" field_uuid="1A6672EF4E18B94E8F40F366B4A2752B"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="4">
+				<color red="237" green="211" blue="181" alpha="255"/>
+				<coordinates left="214" top="0" width="150" height="141.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<index kind="regular" unique_keys="true" uuid="7F8DB871F8525249BA866EF5614308ED" type="7">
+		<field_ref uuid="FE6B9EF0AE4332489A7DFE3A604C2893" name="ID">
+			<table_ref uuid="F42979E95E618942A56EA4686C753E21" name="serverLog"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="F077CCF11A1E95489CD3E21D7ECCC63F" type="7">
+		<field_ref uuid="1A6672EF4E18B94E8F40F366B4A2752B" name="ID">
+			<table_ref uuid="08203D1FAA6F0742A962FFF6A6385220" name="client"/>
+		</field_ref>
+	</index>
+	<base_extra __stringCompHash="icu:72.1.0, alternate=search" __keywordBuildingHash="mecab:0.996;sys.dic:102;">
+		<journal_file journal_file_enabled="true"/>
+	</base_extra>
+</base>
