@@ -3,7 +3,7 @@ Function onConnection($wss : Object; $event : Object) : Object
 	
 	If (VerifyClient($event.request.remoteAddress))
 		// VerifyAddress メソッドはクライアントのアドレスを検証します
-		// 返される WSConnectionHandler オブジェクトは、この接続に関連する 
+		// 返される myConnection オブジェクトは、この接続に関連する 
 		// 4D.WebSocketConnection オブジェクトをインスタンス化するために
 		// 4D によって使用されます
 		return cs:C1710.myConnection.new()
