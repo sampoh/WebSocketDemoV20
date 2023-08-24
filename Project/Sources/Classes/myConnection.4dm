@@ -20,8 +20,8 @@ Function onOpen($ws : 4D:C1709.WebSocketConnection; $message : Object)
 	
 	// 新規接続ユーザーにメッセージを送信
 	$ws.send("Connected. Your session id is '"+$uuid+"'.")
+
 	// その他の接続済チャットクライアントに "新規クライアントが接続しました" メッセージを送信
-	
 	//This.broadcast($ws; "New client connected.")  //チャットではないので不要
 	
 Function onTerminate($ws : 4D:C1709.WebSocketConnection; $message : Object)
